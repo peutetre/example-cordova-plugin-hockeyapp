@@ -29,7 +29,7 @@
       "default": {
         "extend": "app",
         "version": "1.0.4",
-        "hockeyapp_id": "FIXME add the hokeyapp app token id",
+        "hockeyapp_id": "FIXME add the hokeyapp app token id"
       }
     }
   },
