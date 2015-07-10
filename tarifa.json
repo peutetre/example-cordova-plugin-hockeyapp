@@ -1,0 +1,125 @@
+{
+  "name": "testHockeyApp",
+  "id": "com.fortytwoloops.test",
+  "description": "testing cordova-plugin-hockeyapp with tarifa",
+  "version": "1.0.0",
+  "platforms": [
+    "ios@3.8.0",
+    "android@4.0.2"
+  ],
+  "configurations_mixins": {
+    "app": {
+      "id": "com.fortytwoloops.test",
+      "product_name": "testHockeyApp",
+      "product_file_name": "testHockeyApp"
+    }
+  },
+  "configurations": {
+    "ios": {
+      "default": {
+        "extend": "app",
+        "version": "1.0.0",
+        "build_number": "004",
+        "hockeyapp_id": "FIXME add the hokeyapp app token id",
+        "sign": "adhoc",
+        "release": true
+      }
+    },
+    "android": {
+      "default": {
+        "extend": "app",
+        "version": "1.0.4",
+        "hockeyapp_id": "FIXME add the hokeyapp app token id",
+      }
+    }
+  },
+  "cordova": {
+    "preferences": {
+      "DisallowOverscroll": true,
+      "EnableViewportScale": false,
+      "KeyboardDisplayRequiresUserAction": false,
+      "ShowSplashScreenSpinner": false,
+      "SplashScreen": "screen",
+      "BackgroundColor": "0xffffffff",
+      "AutoHideSplashScreen": false,
+      "KeepRunning": true,
+      "Orientation": "portrait"
+    },
+    "whitelist": {
+      "shared": [
+        {
+          "type": "access-origin",
+          "origin": [
+            "*"
+          ]
+        },
+        {
+          "type": "allow-intent",
+          "origin": [
+            "http://*/*",
+            "https://*/*",
+            "tel:*",
+            "sms:*",
+            "mailto:*",
+            "geo:*"
+          ]
+        }
+      ],
+      "android": [
+        {
+          "type": "allow-intent",
+          "origin": [
+            "market:*"
+          ]
+        },
+        {
+          "type": "allow-navigation",
+          "origin": [
+            "*"
+          ]
+        }
+      ],
+      "ios": [
+        {
+          "type": "allow-intent",
+          "origin": [
+            "itms:*",
+            "itms-apps:*"
+          ]
+        }
+      ]
+    }
+  },
+  "author": {
+    "name": "Paul Panserrieu",
+    "email": "paul@42loops.com",
+    "href": "http://42loops.com"
+  },
+  "check": {
+    "ios": "./project/bin/check_ios.js",
+    "android": "./project/bin/check_android.js"
+  },
+  "plugins": {
+    "cordova-plugin-splashscreen": "cordova-plugin-splashscreen@1.0.0",
+    "cordova-plugin-whitelist": "cordova-plugin-whitelist@1.0.0",
+    "cordova-plugin-dialogs": "cordova-plugin-dialogs@1.1.0",
+    "cordova-plugin-hockeyapp": "cordova-plugin-hockeyapp@1.1.0"
+  },
+  "hockeyapp": {
+    "api_url": "https://rink.hockeyapp.net/api/2",
+    "token": "FIXME add your hockeyapp token"
+  },
+  "signing": {
+    "ios": {
+      "adhoc": {
+        "identity": "FIXME add your ios distribution identity",
+        "provisioning_path": "FIXME add path to the provisioning profile",
+        "provisioning_name": "FIXME add the provisioning name"
+      }
+    }
+  },
+  "deploy": {
+    "apple_id": "FIXME add your apple id",
+    "apple_developer_team": "FIXME add your apple developer team if you have more than one"
+  }
+}

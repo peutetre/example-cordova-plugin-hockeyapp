@@ -1,0 +1,20 @@
+{
+  "name": "tarifa-empty-project",
+  "version": "0.0.0",
+  "description": "This is the tarifa default empty project",
+  "license": "MIT",
+  "dependencies": {
+    "q": "1.4.1",
+    "qstart": "0.2.0",
+    "zanimo": "1.1.3"
+  },
+  "devDependencies": {
+    "browserify": "10.2.4",
+    "chokidar": "1.0.3",
+    "watchify": "3.2.3",
+    "chai": "3.0.0",
+    "chai-as-promised": "5.1.0",
+    "mocha": "2.2.5",
+    "wd": "0.3.12"
+  }
+}
