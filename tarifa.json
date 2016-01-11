@@ -103,7 +103,7 @@
     "cordova-plugin-splashscreen": "cordova-plugin-splashscreen@1.0.0",
     "cordova-plugin-whitelist": "cordova-plugin-whitelist@1.0.0",
     "cordova-plugin-dialogs": "cordova-plugin-dialogs@1.1.0",
-    "cordova-plugin-hockeyapp": "cordova-plugin-hockeyapp@1.1.6"
+    "cordova-plugin-hockeyapp": "cordova-plugin-hockeyapp@2.0.0"
   },
   "hockeyapp": {
     "api_url": "https://rink.hockeyapp.net/api/2",

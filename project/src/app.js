@@ -17,7 +17,15 @@ function log(msg) {
 }
 
 function onInit() {
-    window.hockeyapp.start(log('hockeyapp initialized'), displayError, settings.hockeyapp_id);
+    window.hockeyapp.start(
+        log('hockeyapp initialized'),
+        displayError,
+        settings.hockeyapp_id,
+        true,
+        false,
+        window.hockeyapp.loginMode.ANONYMOUS,
+        null
+    );
 }
 
 function onFeedback() {
@@ -25,6 +33,10 @@ function onFeedback() {
 }
 
 function onCrash() {
+    window.hockeyapp.addMetaData(nothing, displayError, {
+        thisisfromJS: 42,
+        anotherattr: 'some meta data from the app...'
+    });
     window.hockeyapp.forceCrash(nothing, displayError);
 }
 
